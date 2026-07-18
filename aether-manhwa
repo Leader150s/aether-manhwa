@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة مانهوا ايثر Pro</title>
+    <!-- استدعاء مكتبة ديسكورد الرسمية -->
+    <script src="https://g.twimg.com/riple/discord-embedded-app-sdk-1.0.0.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f2f3f5; /* لون خلفية ديسكورد الفاتح، أو استخدم #ffffff لأبيض ناصع */
+            color: #2e3338;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 10px; /* تضيق الهوامش مثل الصورة */
+        }
+        /* تنسيق العنوان الرئيسي */
+        h1.main-title {
+            color: #2e3338;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* تنسيق الشبكة (Grid) ليكون 3 أعمدة مثل الصورة على الموبايل */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 أعمدة متساوية */
+            gap: 10px; /* المسافة بين الكروت */
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        /* تنسيق كرت المانهوا (Card) */
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px; /* زوايا دائرية */
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* ظل خفيف جداً */
+            cursor: pointer;
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e3e5e8; /* حدود خفيفة */
+        }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+        /* تنسيق الصورة */
+        .card img {
+            width: 100%;
+            height: 160px; /* ارتفاع مناسب للصورة */
+            object-fit: cover; /* لقص الصورة بشكل متناسق */
+        }
+        /* تنسيق منطقة المعلومات تحت الصورة */
+        .info-container {
+            padding: 8px;
+            text-align: right;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* تنسيق العنوان */
+        .card .title {
+            font-size: 13px;
+            font-weight: bold;
+            color: #2e3338;
+            margin-bottom: 5px;
+            /* لقص النص الطويل وإظهار ... */
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* سطرين كحد أقصى للعنوان */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        /* تنسيق منطقة التقييم والفصل */
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            color: #747f8d;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            color: #f1c40f; /* لون النجمة الذهبية */
+        }
+        .chapter {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="main-title">المكتبة الرئيسية 📖</h1>
+
+    <div class="grid">
+        <!-- كرت مانهوا 1 (مثالDouluo Dalu) -->
+        <div class="card" onclick="alert('قريباً: سيتم فتح الفصول المانهوا!')">
+            <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=400" alt="مانهوا 1">
+            <div class="info-container">
+                <div class="title">Douluo Dalu 3 - ...</div>
+                <div class="stats">
+                    <span class="rating">8.42 ⭐</span>
+                    <span class="chapter">فصل 206</span>
+                </div>
+            </div>
+        </div>
+        <!-- كرت مانهوا 2 (مثال I Became the Mo...) -->
+        <div class="card" onclick="alert('قريباً: سيتم فتح الفصول المانهوا!')">
+            <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400" alt="مانهوا 2">
+            <div class="info-container">
+                <div class="title">I Became the Mo...</div>
+                <div class="stats">
+                    <span class="rating">9.06 ⭐</span>
+                    <span class="chapter">فصل 37</span>
+                </div>
+            </div>
+        </div>
+        <!-- كرت مانهوا 3 (مثال 0 Temperature) -->
+        <div class="card" onclick="alert('قريباً: سيتم فتح الفصول المانهوا!')">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400" alt="مانهوا 3">
+            <div class="info-container">
+                <div class="title">0 Temperature</div>
+                <div class="stats">
+                    <span class="rating">8.62 ⭐</span>
+                    <span class="chapter">فصل 12</span>
+                </div>
+            </div>
+        </div>
+        <!-- كرت مانهوا 4 (مثال Peerless Battle...) -->
+        <div class="card" onclick="alert('قريباً: سيتم فتح الفصول المانهوا!')">
+            <img src="https://images.unsplash.com/photo-1541872120-74513811802b?w=400" alt="مانهوا 4">
+            <div class="info-container">
+                <div class="title">Peerless Battle...</div>
+                <div class="stats">
+                    <span class="rating">9.06 ⭐</span>
+                    <span class="chapter">فصل 576</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // تهيئة ديسكورد SDK
+        const discordSdk = new window.DiscordSDK.DiscordSDK();
+        setupDiscord();
+
+        async function setupDiscord() {
+            try {
+                await discordSdk.ready();
+                console.log("Discord SDK is ready!");
+            } catch (err) {
+                console.error("فشل الاتصال بديسكورد:", err);
+            }
+        }
+    </script>
+</body>
+</html>
